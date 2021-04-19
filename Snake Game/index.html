@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script async type="text/javascript" src="index.js"></script>
+</head>
+
+<body onload="setScreen();" onkeydown="setDirection(event);" align="center">
+    <br><b>SNAKE</b><br><br><br>
+    <div id="pointLabel" style="font-size: calc(1.2vw + 2.4vh);"></div>
+    <div id="square"
+        style="background-color: rgb(32, 33, 37); display: inline-block; border: 2px solid rgb(9, 9, 11); border-radius: 2vw;"
+        align="center"></div>
+    <br><br>
+    <div align="center">
+        <br>
+        <button id="upButton" class="directionButtons" onclick="simulateKeyDown(1);">↑</button>
+        <br>
+        <button id="leftButton" class="directionButtons" onclick="simulateKeyDown(3);">←</button><!--
+        --><button id="downButton" class="directionButtons" onclick="simulateKeyDown(4);">↓</button><!--
+        --><button id="rightButton" class="directionButtons" onclick="simulateKeyDown(2);">→</button>
+    </div>
+</body>
+
+</html>
