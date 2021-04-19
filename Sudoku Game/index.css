@@ -1,0 +1,212 @@
+html {
+    touch-action: manipulation;
+    height: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    height: 100%;
+    font-size: calc(1.4vw + 2.8vh);
+    line-height: 2.5vh;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    touch-action: manipulation;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+div {
+    -webkit-transform: rotateZ(360deg) translateZ(0);
+    transform: rotateZ(360deg) translateZ(0);
+}
+
+button {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    -webkit-transform: rotateZ(360deg) translateZ(0);
+    transform: rotateZ(360deg) translateZ(0);
+}
+
+hr {
+    border: none;
+    border-bottom: calc(.09vw + .18vh) solid rgb(32, 33, 37);
+    margin-bottom: 1.5vw;
+    margin-top: 4vw;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+
+.myDivs {
+    margin: 0;
+    line-height: 0;
+}
+
+.inputs {
+    display: inline-block;
+    width: calc(1.34vw + 4.02vh);
+    height: calc(1.34vw + 4.02vh);
+    line-height: calc(1.34vw + 4.02vh);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: calc(.08vw + .08vh) solid;
+    font-weight: bold;
+    font-size: calc(1vw + 2vh);
+    margin: 0;
+    opacity: 0;
+    transition: opacity .3s ease, background-color .3s ease, color .3s ease;
+    -webkit-transition: opacity .3s ease, background-color .3s ease, color .3s ease;
+}
+
+.buttons1 {
+    display: inline-block;
+    width: calc(1.5vw + 4.5vh);
+    height: calc(1.5vw + 4.5vh);
+    line-height: calc(1.5vw + 4.5vh);
+    text-align: center;
+    border: none;
+    border-radius: calc(.4vw + .8vh);
+    font-weight: bold;
+    font-size: calc(1.2vw + 2.4vh);
+    margin: 2vw;
+    opacity: 0;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+    box-shadow: inset calc(.2vw + .1vh) calc(.2vw + .1vh) calc(.2vw + .1vh) rgb(232, 232, 232), inset calc(-.2vw - .1vh) calc(-.2vw - .1vh) calc(.2vw + .1vh) rgb(15, 16, 20), calc(.2vw + .4vh) calc(.2vw + .4vh) calc(.4vw + .8vh) rgb(32, 33, 37);
+}
+
+.jokerButton1 {
+    display: inline-block;
+    text-shadow: none;
+    border: none;
+    border-radius: calc(.4vw + .8vh);
+    font-weight: bold;
+    font-size: calc(1vw + 2vh);
+    padding: 1.5%;
+    margin: 0;
+    margin-top: 2vw;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+    box-shadow: inset calc(.2vw + .2vh) calc(.2vw + .2vh) calc(.2vw + .2vh) rgb(63, 64, 73), inset calc(-.2vw - .2vh) calc(-.2vw - .2vh) calc(.2vw + .2vh) rgb(6, 6, 8), calc(.4vw + .4vh) calc(.4vw + .4vh) calc(.8vw + .8vh) rgb(32, 33, 37);
+}
+
+.mistakeLabel {
+    font-size: calc(1.2vw + 2.4vh);
+    padding: 0;
+    margin: 0;
+    margin-top: 2vw;
+    transition: opacity .6s ease;
+    -webkit-transition: opacity .6s ease;
+    text-shadow: none;
+    opacity: 0;
+}
+
+.switchThemeButton {
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 800;
+    font-size: calc(.4vw + 1.2vh);
+    border: none;
+    position: absolute;
+    top: calc(.6vw + 1.2vh);
+    right: calc(.3vw + .6vh);
+    margin: 1.5vw;
+    text-align: center;
+    padding: .8%;
+    transition: opacity .6s ease;
+    -webkit-transition: opacity .6s ease;
+    opacity: 0;
+}
+
+.playAgainDiv {
+    height: 100%;
+    line-height: normal;
+    font-size: calc(1.4vw + 2.8vh);
+    padding: 0;
+    opacity: 0;
+    will-change: opacity, background-color;
+    transition: opacity .3s ease, background-color .4s ease;
+    -webkit-transition: opacity .3s ease, background-color .4s ease;
+    overflow: hidden;
+    font-weight: 600;
+    margin: 0;
+}
+
+.confirmButton {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: calc(.65vw + 1.3vh);
+    margin: calc(1vw + 3vh);
+    margin-bottom: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: calc(1.2vw + 2.4vh);
+    text-shadow: 1.6px .8px rgba(0, 0, 0, 1);
+}
+
+.exitButton {
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: calc(.6vw + 1.2vh);
+    left: calc(.3vw + .6vh);
+    margin: 1.5vw;
+    padding: .8%;
+    border: none;
+    font-size: calc(.4vw + 1.2vh);
+    font-weight: 800;
+    transition: opacity .6s ease;
+    -webkit-transition: opacity .6s ease;
+    opacity: 0;
+}
+
+.myErrorMessage {
+    display: inline-block;
+    height: 2.5vh;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 1vw;
+    opacity: 0;
+    font-size: calc(.7vw + 1.4vh);
+    font-weight: bold;
+    will-change: width;
+    text-shadow: none;
+    -webkit-transform: rotateZ(360deg) translateZ(0);
+    transform: rotateZ(360deg) translateZ(0);
+}
+
+.difficultyButtons {
+    position: absolute;
+    top: 4.2vh;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-radius: calc(.65vw + 1.3vh);
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: calc(1.28vw + 2.56vh);
+    font-weight: normal;
+    opacity: 0;
+    transition: opacity .45s ease, border .45s linear;
+    -webkit-transition: opacity .45s ease, border .45s linear;
+    will-change: transform;
+    -webkit-transform: rotateZ(360deg) translateZ(0);
+    transform: rotateZ(360deg) translateZ(0);
+}
+
+.selectDifficulty {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 auto;
+    opacity: 0;
+    will-change: width;
+}
