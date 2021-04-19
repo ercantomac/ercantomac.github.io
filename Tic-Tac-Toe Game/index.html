@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="xox.css">
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyCN25JRtaLUuw1hihGEr8eEDwayEz1_6pw",
+            authDomain: "tic-tac-toe-by-ercan.firebaseapp.com",
+            projectId: "tic-tac-toe-by-ercan",
+            storageBucket: "tic-tac-toe-by-ercan.appspot.com",
+            messagingSenderId: "894156384091",
+            appId: "1:894156384091:web:be28a67e5914f4439a5c7e"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+        var player_1, player_2;
+        function initializePlayers() {
+            db.ref("player_1").child("ready").get().then(function (snapshot) {
+                db.ref("player_2").child("ready").get().then(function (snapshot2) {
+                    if (snapshot.val().toString() != "1" && snapshot2.val().toString() != "1") {
+                        player_1 = db.ref("player_3");
+                        player_2 = db.ref("player_4");
+                    }
+                    else {
+                        player_1 = db.ref("player_1");
+                        player_2 = db.ref("player_2");
+                    }
+                });
+            });
+            playModeSelection();
+        }
+    </script>
+
+
+    <script async type="text/javascript" src="xox.js"></script>
+    <script async type="text/javascript" src="ai.js"></script>
+    <script async type="text/javascript" src="multiplayer.js"></script>
+</head>
+
+<body onload="initializePlayers();" onunload="databaseCleaner();" onbeforeunload="databaseCleaner();" align="center">
+    <br>
+    <div id="header" class="header"></div>
+    <br>
+    <div id="turnLabel" class="turnLabel">
+        <div id="turnLabelInner" style="will-change: transform;"></div>
+    </div>
+    <br><br>
+    <div id="mainDiv" class="mainDiv">
+        <div class="secondaryDiv">
+            <table class="myTable">
+                <tr>
+                    <td id="cell_0" onclick="buttonHandler(0);"></td>
+                    <td id="cell_1" onclick="buttonHandler(1);"></td>
+                    <td id="cell_2" onclick="buttonHandler(2);"></td>
+                </tr>
+                <tr>
+                    <td id="cell_3" onclick="buttonHandler(3);"></td>
+                    <td id="cell_4" onclick="buttonHandler(4);"></td>
+                    <td id="cell_5" onclick="buttonHandler(5);"></td>
+                </tr>
+                <tr>
+                    <td id="cell_6" onclick="buttonHandler(6);"></td>
+                    <td id="cell_7" onclick="buttonHandler(7);"></td>
+                    <td id="cell_8" onclick="buttonHandler(8);"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br><br><br>
+    <button id="backgroundButton" class="backgroundButton" onclick="backgroundChanger();">CHANGE<br>BACKGROUND</button>
+</body>
+
+</html>
