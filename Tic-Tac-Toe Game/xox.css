@@ -1,0 +1,241 @@
+@keyframes scoreBoard {
+    0% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}
+
+@keyframes waiting {
+    0% {
+        color: rgba(0, 0, 0, .18);
+        text-shadow: .15vh .3vh .3vh rgba(0, 0, 0, .09);
+    }
+    100% {
+        color: rgba(0, 0, 0, .72);
+        text-shadow: .15vh .3vh .3vh rgba(0, 0, 0, .36);
+    }
+}
+
+@keyframes animation1 {
+    100% {
+        transform: rotateY(180deg);
+        border: 1px solid transparent;
+    }
+}
+
+@keyframes animation2 {
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+html {
+    height: 100%;
+    touch-action: manipulation;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    height: 100%;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+td {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, .86);
+}
+
+.mainDiv {
+    display: flex;
+    display: -webkit-flex;
+    margin: auto;
+    width: 96vw;
+    height: 96vw;
+    opacity: .1;
+    transform: scale(0);
+    border-radius: 3.2vh;
+    box-shadow: 0 1.5vh 4.5vh -.7vh rgba(0, 0, 0, .86);
+    background-color: rgba(255, 255, 255, .16);
+}
+
+.secondaryDiv {
+    display: flex;
+    display: -webkit-flex;
+    margin: auto;
+    width: 90vw;
+    height: 90vw;
+    overflow: hidden;
+}
+
+.myTable {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 93vw;
+    height: 93vw;
+    border-collapse: collapse;
+    border-style: hidden;
+    text-align: center;
+    table-layout: fixed;
+}
+
+.myInnerDivs {
+    -webkit-transform: rotateZ(360deg) translateZ(0);
+    transform: rotateZ(360deg) translateZ(0);
+    display: flex;
+    display: -webkit-flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12vh;
+    text-align: center;
+    transform: scale(0);
+    will-change: transform;
+    contain: content;
+}
+
+.header {
+    color: rgba(0, 0, 0, .72);
+    text-shadow: .1vh .2vh .2vh rgba(0, 0, 0, .36);
+    font-size: 3vh;
+    opacity: .1;
+    transform: scale(0);
+    font-weight: 700;
+}
+
+.backgroundButton {
+    -webkit-transform: rotateZ(360deg) translateZ(0);
+    transform: rotateZ(360deg) translateZ(0);
+    background-color: transparent;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, .72) 14%, rgba(0, 0, 0, .58) 50%, rgba(0, 0, 0, .72) 86%);
+    color: rgba(255, 255, 255, .64);
+    padding: 2.7vw;
+    padding-right: 3.6vw;
+    padding-left: 3.6vw;
+    border-radius: 3vw;
+    border: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 .5vh 1.5vh -.24vh rgba(0, 0, 0, .86);
+    font-weight: 500;
+    will-change: transform, opacity;
+    contain: content;
+}
+
+.resultScreen {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 3.5%;
+    font-size: 4.2vh;
+    text-shadow: .15vh .3vh .3vh rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, .36);
+    color: transparent;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-weight: 500;
+    will-change: transform, opacity;
+}
+
+.scoreBoard {
+    padding: 2.7vw;
+    padding-right: 3.6vw;
+    padding-left: 3.6vw;
+    font-size: 2.8vh;
+    font-weight: 500;
+    color: rgba(0, 0, 0, .72);
+    background-size: 300%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, .21) 46%, rgba(255, 255, 255, .42) 50%, rgba(255, 255, 255, .21) 54%);
+    background-position: right;
+    border-radius: 3vw;
+    opacity: 0;
+    box-shadow: inset -.1875vw -.1875vw .1875vw rgba(255, 255, 255, .21), inset .1875vw .1875vw .3125vw rgba(0, 0, 0, .72);
+    animation: scoreBoard 4s ease 0s infinite normal forwards;
+    -webkit-animation: scoreBoard 4s ease 0s infinite normal forwards;
+    contain: content;
+}
+
+.nameInput {
+    width: 75%;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, .42);
+    border: none;
+    border-radius: 3vw;
+    color: rgba(0, 0, 0, .72);
+    padding: 2.7vw;
+    padding-right: 3.6vw;
+    padding-left: 3.6vw;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 .5vh 1.5vh -.24vh rgba(0, 0, 0, .86);
+    transform: scale(0);
+    opacity: .1;
+    contain: content;
+}
+
+.nameInput::placeholder {
+    color: rgba(0, 0, 0, .36);
+    font-weight: 500;
+}
+
+.turnLabel {
+    -webkit-transform: rotateZ(360deg) translateZ(0);
+    transform: rotateZ(360deg) translateZ(0);
+    display: none;
+    width: 20vh;
+    padding: 1.35vw;
+    padding-right: 2.25vw;
+    padding-left: 2.25vw;
+    overflow: hidden;
+    font-size: 2vh;
+    font-weight: 500;
+    text-shadow: .15vh .3vh .3vh rgba(0, 0, 0, .42);
+    border-radius: 3vw;
+    transform: scale(0);
+    opacity: .1;
+    contain: content;
+}
+
+.loading {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    will-change: transform;
+    width: 7vw;
+    height: 7vw;
+    border: 1px solid rgba(0, 0, 0, .72);
+    border-radius: 50%;
+    animation: animation1 1.5s linear 0s infinite alternate forwards;
+    transform-style: preserve-3d;
+}
+
+.innerDiv {
+    color: rgba(255, 255, 255, .64);
+    font-size: 7vw;
+    font-weight: 100 !important;
+    animation: animation2 3s linear 0s infinite alternate forwards;
+    transform-style: preserve-3d;
+}
