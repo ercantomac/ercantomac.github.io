@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("./losslesscompressed2.png");
+    background-image: url("./losslesscompressed.png");
     font-family: 'Lato', sans-serif;
     overflow: hidden;
     backdrop-filter: blur(12px);
