@@ -83,7 +83,6 @@ a {
     text-shadow: 0 .15vw .15vw rgba(0, 0, 0, .4);
     color: rgba(0, 0, 0, .8);
     background-color: rgba(255, 255, 255, .07);
-    /*background-image: url("./grain_noise.png");*/
     border-radius: 1.5vw;
     box-shadow: 0 .25vw .75vw -.2vw rgba(0, 0, 0, .8);
     opacity: 0;
