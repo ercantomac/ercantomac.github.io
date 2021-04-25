@@ -59,7 +59,7 @@ function hoverAnimation(wrap, el, inner, cnt) {
         backgroundColor: [((cnt == 1) ? "transparent" : "rgba(255, 255, 255, .07)")],
         color: [((cnt == 1) ? "rgba(255, 255, 255, .625)" : "rgba(0, 0, 0, .8)")],
         fontSize: [((cnt == 1) ? "2.75vw" : "2.25vw")],
-        boxShadow: [((cnt == 1) ? "0 .75vw 2.25vw -.2vw rgba(0, 0, 0, .8)" : "0 .25vw .75vw -.2vw rgba(0, 0, 0, .8)")]
+        boxShadow: [((cnt == 1) ? "0 1vw 1.35vw -.15vw rgba(0, 0, 0, .625)" : "0 .25vw .45vw -.15vw rgba(0, 0, 0, .8)")]
     }, {
         duration: 600,
         easing: "ease",
