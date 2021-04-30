@@ -50,8 +50,8 @@ function hoverAnimation(wrap, el, inner, cnt) {
     wrap.animate({
         transform: [((cnt == 1) ? "translateX(0)" : "translateX(-28vw)")]
     }, {
-        duration: 600,
-        easing: "cubic-bezier(0.215, 0.610, 0.355, 1)",
+        duration: ((cnt == 1) ? 800 : 600),
+        easing: ((cnt == 1) ? "cubic-bezier(0.215, 0.610, 0.355, 1)" : "ease"),
         fill: "forwards"
     });
     el.animate({
