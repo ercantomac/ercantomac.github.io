@@ -1,11 +1,9 @@
 html {
     height: 100%;
-    /*touch-action: manipulation;*/
 }
 
 body {
     height: 100%;
-    /*touch-action: manipulation;*/
     margin: 0 !important;
     padding: 0 !important;
     display: flex;
@@ -14,7 +12,6 @@ body {
     align-items: center;
     background-image: url("./background.jpg");
     background-size: cover;
-    /*background-size: 100vw 100vh;*/
     font-family: 'Lato', sans-serif;
     overflow: hidden;
     backdrop-filter: blur(16px);
@@ -86,12 +83,6 @@ a {
 }
 
 .myCards {
-    /*-webkit-transform: rotateZ(360deg) translateZ(0);
-    transform: rotateZ(360deg) translateZ(0);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    background-image: url("./grain_noise.png");
-    box-shadow: 0 .25vw .75vw -.2vw rgba(0, 0, 0, .8);*/
     will-change: transform, background-color, color, font-size;
     contain: strict;
     position: relative;
