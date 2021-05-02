@@ -8,10 +8,10 @@ function onLoad() {
     document.body.animate({
         backdropFilter: ["none"]
     }, {
-        duration: 1000,
+        duration: 1200,
         easing: "ease",
         fill: "forwards",
-        delay: 200
+        delay: 300
     });
     header.animate({
         transform: ["translateY(-6vw)", "translateY(0)"]
@@ -19,7 +19,7 @@ function onLoad() {
         duration: 800,
         easing: "ease",
         fill: "forwards",
-        delay: 1200
+        delay: 1500
     });
     for (var i = 0; i < 6; i++) {
         card[i].animate({
@@ -28,7 +28,7 @@ function onLoad() {
             duration: 700,
             easing: "cubic-bezier(0.215, 0.610, 0.355, 1)",
             fill: "forwards",
-            delay: (i < 3) ? (2000 + (i * 100)) : (2000 + (i * 100) + 300)
+            delay: (i < 3) ? (2300 + (i * 100)) : (2300 + (i * 100) + 300)
         });
         card[i].animate({
             opacity: ["0", "1"]
@@ -36,7 +36,7 @@ function onLoad() {
             duration: 700,
             easing: "ease",
             fill: "forwards",
-            delay: (i < 3) ? (2000 + (i * 100) + 100) : (2000 + (i * 100) + 400)
+            delay: (i < 3) ? (2300 + (i * 100) + 100) : (2300 + (i * 100) + 400)
         });
     }
     setTimeout(() => {
@@ -48,7 +48,7 @@ function onLoad() {
 }
 function hoverAnimation(wrap, el, inner, cnt) {
     wrap.animate({
-        transform: [((cnt == 1) ? "translateX(0)" : "translateX(-28vw)")]
+        transform: [((cnt == 1) ? "translateX(0)" : "translateX(-28.2vw)")]
     }, {
         duration: ((cnt == 1) ? 800 : 600),
         easing: ((cnt == 1) ? "cubic-bezier(0.215, 0.610, 0.355, 1)" : "ease"),
@@ -58,7 +58,8 @@ function hoverAnimation(wrap, el, inner, cnt) {
         transform: [((cnt == 1) ? "translateY(-2.5vw)" : "translateY(0)")],
         backgroundColor: [((cnt == 1) ? "transparent" : "rgba(255, 255, 255, .02)")],
         fontSize: [((cnt == 1) ? "2.75vw" : "2.25vw")],
-        boxShadow: [((cnt == 1) ? "0 1vw 1.5vw -.15vw rgba(0, 0, 0, .8)" : "0 .25vw .5vw -.15vw rgba(0, 0, 0, .8)")]
+        boxShadow: [((cnt == 1) ? "0 1vw 1.5vw -.15vw rgba(0, 0, 0, .625)" : "0 .25vw .5vw -.15vw rgba(0, 0, 0, .625)")],
+        border: [((cnt == 1) ? "1px solid rgba(0, 0, 0, .8)" : "1px solid rgba(255, 255, 255, .2)")]
     }, {
         duration: 600,
         easing: "ease",
