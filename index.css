@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("./background.jpg");
+    background-image: url("./background.png");
     background-size: cover;
     font-family: 'Lato', sans-serif;
     overflow: hidden;
@@ -35,31 +35,14 @@ a {
     border-bottom-right-radius: 1.25vw;
     font-size: 2.75vw;
     font-weight: 800;
-    color: rgba(255, 255, 255, .625);
+    color: rgb(208, 208, 208);
     text-shadow: 0 .2vw .15vw rgba(0, 0, 0, .8);
     background-color: rgba(0, 0, 0, .625);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     transform: translateY(-6vw);
-}
-
-.header::before {
-    border-bottom-left-radius: 1.25vw;
-    border-bottom-right-radius: 1.25vw;
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 2px;
-    padding-top: 0;
-    background: linear-gradient(135deg, #17F094, #02e5f4);
-    -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
-    mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
+    border: 1px solid rgba(0, 0, 0, .8);
+    border-top: none;
 }
 
 .lineDivs {
@@ -77,13 +60,13 @@ a {
     left: 0;
     width: 28vw;
     height: 14vw;
-    z-index: -2;
+    z-index: 0;
     background-color: rgba(0, 0, 0, .625);
-    transform: translateX(-28vw);
+    transform: translateX(-28.2vw);
 }
 
 .myCards {
-    will-change: transform, background-color, color, font-size;
+    will-change: transform, background-color, font-size, box-shadow;
     contain: strict;
     position: relative;
     display: flex;
@@ -95,31 +78,14 @@ a {
     font-weight: 800;
     text-shadow: 0 .15vw .15vw rgba(0, 0, 0, .8);
     background-color: rgba(255, 255, 255, .02);
-    color: rgba(255, 255, 255, .625);
-    box-shadow: 0 .25vw .5vw -.15vw rgba(0, 0, 0, .8);
+    color: rgb(208, 208, 208);
+    box-shadow: 0 .25vw .5vw -.15vw rgba(0, 0, 0, .625);
     opacity: 0;
     overflow: hidden;
     backdrop-filter: blur(16px) brightness(110%);
     -webkit-backdrop-filter: blur(16px) brightness(110%);
     border-radius: 1.75vw;
-    z-index: 0;
-}
-
-.myCards::before {
-    border-radius: 1.75vw;
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 2px;
-    background: linear-gradient(135deg, #17F094, #02e5f4);
-    -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
-    mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
+    border: 1px solid rgba(255, 255, 255, .2);
 }
 
 .innerDivs {
@@ -132,7 +98,7 @@ a {
     font-size: 1vw;
     font-weight: 600;
     text-shadow: none;
-    color: rgba(255, 255, 255, .4);
+    color: rgb(160, 160, 160);
     contain: content;
 }
 
