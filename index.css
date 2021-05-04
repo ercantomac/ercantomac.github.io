@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh7USSwiPGQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Lato700';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwaPGR_p.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Lato700';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/lato/v17/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 html {
     height: 100%;
 }
@@ -12,7 +44,6 @@ body {
     align-items: center;
     background-image: url("./background.png");
     background-size: cover;
-    font-family: 'Lato', sans-serif;
     overflow: hidden;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -24,35 +55,37 @@ a {
 }
 
 .header {
+    font-family: 'Lato700', sans-serif;
     position: fixed;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5.25vw;
     width: 90vw;
+    height: 5.25vw;
+    font-size: 2.75vw;
+    color: rgba(0, 0, 0, .8);
     border-bottom-left-radius: 1.25vw;
     border-bottom-right-radius: 1.25vw;
-    font-size: 2.75vw;
-    font-weight: 800;
-    color: rgb(208, 208, 208);
-    text-shadow: 0 .2vw .15vw rgba(0, 0, 0, .8);
-    background-color: rgba(0, 0, 0, .625);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    transform: translateY(-6vw);
-    border: 1px solid rgba(0, 0, 0, .8);
+    border: 1px solid rgba(255, 255, 255, .2);
     border-top: none;
+    box-shadow: inset .175vw 0 .3vw -.05vw rgba(0, 0, 0, .625);
+    transform: translateY(-6vw);
+    backdrop-filter: blur(10px) brightness(85%);
+    -webkit-backdrop-filter: blur(10px) brightness(85%);
 }
 
 .lineDivs {
     display: flex;
     justify-content: center;
-    align-items: center;
     contain: layout;
 }
 
 .wrapper {
+    -webkit-transform: rotateZ(360deg) translateZ(0);
+    transform: rotateZ(360deg) translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     will-change: transform;
     contain: strict;
     position: absolute;
@@ -66,6 +99,11 @@ a {
 }
 
 .myCards {
+    font-family: 'Lato', sans-serif;
+    -webkit-transform: rotateZ(360deg) translateZ(0);
+    transform: rotateZ(360deg) translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     will-change: transform, background-color, font-size, box-shadow;
     contain: strict;
     position: relative;
@@ -75,17 +113,15 @@ a {
     width: 28vw;
     height: 14vw;
     font-size: 2.25vw;
-    font-weight: 800;
-    text-shadow: 0 .15vw .15vw rgba(0, 0, 0, .8);
+    font-weight: 600;
+    text-shadow: 0 .1vw .15vw rgba(0, 0, 0, .625);
     background-color: rgba(255, 255, 255, .02);
     color: rgb(208, 208, 208);
+    border-radius: 1.75vw;
+    border: 1px solid rgba(255, 255, 255, .2);
     box-shadow: 0 .25vw .5vw -.15vw rgba(0, 0, 0, .625);
     opacity: 0;
     overflow: hidden;
-    backdrop-filter: blur(16px) brightness(110%);
-    -webkit-backdrop-filter: blur(16px) brightness(110%);
-    border-radius: 1.75vw;
-    border: 1px solid rgba(255, 255, 255, .2);
 }
 
 .innerDivs {
@@ -103,10 +139,14 @@ a {
 }
 
 .innersContent {
+    -webkit-transform: rotateZ(360deg) translateZ(0);
+    transform: rotateZ(360deg) translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: width;
+    contain: content;
     display: inline-block;
     width: 0;
     overflow: hidden;
     margin: 0 auto;
-    contain: content;
-    will-change: width;
 }
