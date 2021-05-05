@@ -1,0 +1,78 @@
+html {
+    height: 100%;
+    touch-action: manipulation;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100%;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: rgb(75, 0, 130);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .02), rgba(0, 0, 0, .04));
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.mainDiv {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.innerDivs {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    flex-direction: column;
+    width: 28vw;
+    height: 32vh;
+    border-radius: 2.8vh;
+    background-color: rgba(0, 0, 0, .21);
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .02), rgba(0, 0, 0, .04));
+    box-shadow: inset -.21vw -.21vw .21vw rgba(255, 255, 255, .28), inset .21vw .21vw .42vw rgba(0, 0, 0, .72);
+    font-size: 10.2vh;
+    color: rgb(24, 24, 24);
+    -webkit-transform: rotateZ(360deg) translateZ(0);
+    transform: rotateZ(360deg) translateZ(0);
+    will-change: transform;
+    content-visibility: auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    overflow: scroll;
+    contain: strict;
+}
+
+.innerDivs::-webkit-scrollbar {
+    display: none;
+}
+
+.innerInner {
+    opacity: .36;
+    scroll-snap-align: center;
+    will-change: transform, opacity;
+    -webkit-transform: rotateZ(360deg) translateZ(0) scale(.68);
+    transform: rotateZ(360deg) translateZ(0) scale(.68);
+    contain: content;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 10.5vh;
+    height: 10.5vh;
+    border-radius: 50%;
+    font-size: 4.8vh;
+    border: .6vw solid rgb(219, 219, 219);
+    color: rgb(219, 219, 219);
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    filter: drop-shadow(0 0 .3vh rgba(219, 219, 219, .68));
+    -webkit-filter: drop-shadow(0 0 .3vh rgba(219, 219, 219, .68));
+}
