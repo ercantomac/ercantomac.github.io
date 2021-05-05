@@ -96,6 +96,7 @@ a {
     z-index: 0;
     background-color: rgba(0, 0, 0, .625);
     transform: translateX(-28.2vw);
+    content-visibility: auto;
 }
 
 .myCards {
@@ -122,6 +123,7 @@ a {
     box-shadow: 0 .25vw .5vw -.15vw rgba(0, 0, 0, .625);
     opacity: 0;
     overflow: hidden;
+    content-visibility: auto;
 }
 
 .innerDivs {
@@ -136,6 +138,7 @@ a {
     text-shadow: none;
     color: rgb(160, 160, 160);
     contain: content;
+    content-visibility: auto;
 }
 
 .innersContent {
@@ -149,4 +152,5 @@ a {
     width: 0;
     overflow: hidden;
     margin: 0 auto;
+    content-visibility: auto;
 }
