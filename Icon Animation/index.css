@@ -30,4 +30,5 @@ body {
     font-size: 10vh;
     color: rgb(21, 21, 24);
     overflow: hidden;
+    content-visibility: auto;
 }
